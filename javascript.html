@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .example9 {
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            float: left;
+            margin-right: 50px;
+        }
+
+        #red {
+            background-color: red;
+        }
+        #blue {
+            background-color: blue;
+        }
+        #yellow {
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- inline JS example --><button onclick="alert('Hi!')">Click this motherfucker!</button>
+<!-- example 3 --> <p id="example3p">Oi! Rude Boy!</p> <!-- example 6 added text -->
+<!-- example 4 --> <button id="example4">Click here</button>
+<!-- example 5 --> <p id="example5p">javascript is...</p>
+<!-- example 5 --><button id="example5Btn">Append this text</button>
+<!-- example 7 --><p id="example7p"></p>
+<!-- example 7 --><button id="example7Btn">Example 7</button>
+<!-- example 8 --><p id="example8p">styling text w/js</p>
+<!-- example 8 --><button id="example8Btn">Style it!</button>
+<!-- example 9 --><div class="example9" id="red"></div>
+<div class="example9" id="blue"></div>
+<div class="example9" id="yellow"></div>
+<!-- example 10 --><input type="text" id="text10"><!-- by default this is text -->
+<!-- example 10 --><button id="example10btn">Change the text</button>
+<!-- example 10 --><p id="example10p">This is example 10</p>
+<!-- example 12 --><p>What is the magic number?</p>
+<!-- example 12 --><input type="number" id="ex12">
+<!-- example 12 --><p><button id="magic">Tell Me</button></p>
+<!-- example 13 --><p>How Many Fingers?</p>
+<!-- example 13 --><p><input type="text" id="guess"><button id="checkGuess">Enter Guess!</button></p>
+    <!-- Internal JS example --><script type="text/javascript">
+  /*       alert('Hey, it loaded!'); */
+
+    
+//example 3//
+/* tells JS to look for something inside THIS document--> */document.getElementById("example3p").innerHTML = "eat me, punk!"
+
+
+//example 4//  
+document.getElementById("example4").onclick = function(){
+
+alert("button clicked");
+
+}
+
+//example 5//
+//using the button to change text on the page//
+document.getElementById("example5Btn").onclick = function(){
+document.getElementById("example5p").innerHTML = "you smell funny!"
+}
+
+//example 6//
+//adding text to content by appending//
+document.getElementById("example3p").innerHTML = document.getElementById("example3p").innerHTML + " yeah you!";//the "+" adds content to already existing content//
+
+//example 7//
+//making content appear out of nowhere via button click//
+document.getElementById("example7Btn").onclick = function(){
+document.getElementById("example7p").innerHTML = "And just like that - text";
+}
+//this can be ANY HTML - to include h1, h2, etc. simply type as though it were HTML//
+//ex: "<h1>This is Text</h1>" and it will pass as a heading saying "this is text"//
+
+//example 8//
+//manipulating styles with javascript//
+document.getElementById("example8Btn").onclick = function(){
+document.getElementById("example8p").style.color = "red";
+//you can change the font size by typing fontSize (no hyphens)//
+//to make the text disappear, simply change the "display" property to "none"
+}
+//example 9//
+//disappearing circles//
+document.getElementById("red").onclick = function(){
+document.getElementById("red").style.display = "none";
+}
+document.getElementById("blue").onclick = function(){
+document.getElementById("blue").style.display = "none";
+}
+document.getElementById("yellow").onclick = function(){
+document.getElementById("yellow").style.display = "none";
+}
+//example 10//
+//working with variables//
+var name = "Joey";
+console.log("name");
+//create a function that changes the example text to the entered text//
+//first make the button do something//
+document.getElementById("example10btn").onclick = function(){
+/* document.getElementById("example10p").innerHTML = "enter new text"; */
+
+var textEntered = "";
+textEntered = document.getElementById("text10").value;//dont forget to tell it to go to the document//
+console.log("textEntered");
+document.getElementById("example10p").innerHTML = textEntered;
+
+}
+//example 11//
+//working with basic arrays//
+var firstArray = new Array();//the array is a function that returns a list of values//
+firstArray[0] = "Tacoma";//begin by setting the values "0" is the first place in the index of values//
+firstArray[1] = "4Runner";//4runner is in position 1 and is the 2nd value//
+console.log(firstArray.length);//.legth will return the amount of items in the array//
+//another way to create an array//
+var myRides = ["Tacoma TRD", "4Runner Nightshade", "4Runner TRD PRO"];
+//now call on 4runner nightshade//
+console.log(myRides[1]);
+//now add a new item to the array//
+myRides.push("2005 4Runner SR5")
+console.log(myRides);
+//remove items from the array//
+myRides.splice(3, 1, "Tundra TRD PRO");//reads: remove one item starting in position 2//
+//to replace an item in the array//
+//follow deletion steps, but add a new item following the "1"//
+//in this example "Tundra TRD PRO"//
+console.log(myRides);
+//if you want to use splice to add items to the array//
+//instead of adding the "1" (which deletes one item) change that to "0"//
+//following the "0" add a string containing the item you wish to add//
+
+//example 12//
+//learning logic - using if statements//
+var x = 2;
+if (x == 1); {//when you see one = it is setting a value/ when there are 2 == you are testing the statement//
+    alert("X is 1");
+}
+//magic number guesser//
+document.getElementById("magic").onclick = function(){
+var magicNumber = document.getElementById("ex12").value;//fetch the value of the User's input//
+var correctMagic = "666";
+if (magicNumber == correctMagic){//if magicNumber is equal to correctMagic and is true// 
+    
+    alert("nailed it!")
+
+} else {//if false//
+    
+    alert("N O P E !");
+}
+
+}
+
+//example 13//
+//guess how many fingers//
+
+//generate a random number between 0-5 with no decimals//
+//alert(math.floor(math.random() * 6));//
+document.getElementById("checkGuess").onclick = function(){
+    var randomNumber = Math.random();
+    randomNumber = randomNumber * 6;
+    randomNumber = Math.floor(randomNumber);
+    if (document.getElementById("guess").value == randomNumber){
+        alert("Way to go Homie!");
+    } else{
+        alert("Sorry my friend, the actual number was " + randomNumber);
+
+    }}
+    </script>
+</body>
+</html>

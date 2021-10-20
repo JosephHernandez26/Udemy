@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!-- This is the title head you see in the tab -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Motherfucker!</title> <!-- This is the title of your webpage in the tab -->
+    <!-- INTERNAL CSS EX: -->
+    <style type="text/css">
+    
+    #rednshit {
+        color: darkred;
+        font-size: 200%;
+    }
+    h1 {
+        color: green;
+    }
+    .large {
+        font-size: 150%;
+    }
+    .xlarge {
+        font-size: 200%;
+    }
+    .dummy {
+        color: green;
+    }
+    #first-section {
+
+        color: darkblue;
+        background-color: burlywood;
+    }
+    #firstSec {
+
+        float: left;
+        background-color: darkcyan;
+        color: darkslateblue;
+    }
+
+    #secondSec {
+
+        float: right;
+        background-color: darkgreen;
+        color: deepskyblue;
+    }
+
+    #notFloat {
+
+        clear: both;
+        background-color: darkorchid;
+        color: gold;
+    }
+    </style>
+</head>
+<body> <!-- This is the main content -->
+    <h1>HEYO!</h1> <!-- Main Header - BOLD -->
+    <p id="rednshit">Here is some <b>rad</b> content n <strong>shit</strong></p><!-- Paragraph tag (strong=bold)(rad=another way to type bold) -->
+    <h2>I wanted a smaller heading for some reason</h2><!-- Subheader -->
+    <p>here i am pracicing <em>some code</em> and <u>stuff</u></p><!-- em=italisize u=underline -->
+    <p>I am trying <sub>subscript</sub> and of course fome <sup>superscript</sup> text</p><!-- sub=subtext, sup=superimposed -->
+    <hr><!-- hr=horizontal rule -->
+    <p>over here is some <del> deleted text because why not </del></p><!-- del=is also strikethrough -->
+        <hr>
+        <ul><!-- ul=unordered list -->
+            <!-- CSS Inline styling using classes --><li class="large"><strong>My butt</strong></li><!-- li=list item -->
+            <li><sub>Her butt</sub></li>
+            <li><em>His butt</em> and Their butt</li>
+            <li><delg>So Many butts</del></li>
+        </ul>
+        <hr>
+        <ol start="5" type="I"><!-- ol=ordered list, start at 5, listed as uppercase roman numerals -->
+            <li class="xlarge"><strong>Tacos</strong></li>
+            <li><sub>Street Kind</sub></li>
+            <li><em>Pork Kind</em> and beef kinds</li>
+            <li><delg>Chicken and shit</del></li>
+        </ol>
+        <hr>
+        <form><!-- This is a form -->
+            <p>Username: <input type="text" placeholder="enter username"></p><!-- input requires text, placeholder is a text hint for the user -->
+            <p>Stay logged in: <input type="checkbox" checked></p><!-- this is a pre-checked checkbox -->
+            <p>Under 21 <input type="radio" name="age" value="u21"></p><!-- this is a radio input -->
+            <p>Over 21 <input type="radio" name="age" value="o21"></p>
+            <p>Favorite Car:
+                <select><!-- this is a drop down menu and the options are listed below. "selected" means it has been default chosen -->
+                    <option>Tacoma</option>
+                    <option selected>4Runner</option>
+                    <option>Supra</option>
+                    <option>Tundra</option>
+                </select>
+            </p>
+            <p><input type="submit" value="Full Send!!"></p><!-- This is a submit button -->
+        </form>
+        <hr>
+        <table><!-- Table tag -->
+            <thead><!-- Table header -->
+                <tr>
+                    <th>Name</th><!-- Table header titles (bold) -->
+                    <th>Favorite<br>Color</th>
+                </tr>
+            </thead>
+            <tbody><!-- Table body -->
+            <tr><!-- Table row -->
+                <td>Joey</td><!-- Table data - or the stuff in the table cell -->
+                <td>Black</td>
+            </tr>
+            <tr>
+                <td>Hannah</td>
+                <td>Green</td>
+            </tr>
+            <p id="top"><a href="http://www.google.com">Click Here Dummy <img src="https://www.biography.com/.image/t_share/MTgwOTcxNTk5NTIyOTY0ODQw/gettyimages-515410892.jpg" height="250" width="450"></a></p>
+            <!-- HREF=hyperlink reference. this is a hyp[erlink with an image attached with predefined attributes] -->
+            <p><a href="http://www.google.com"><span class="dummy"> Click Here Dummy <img src="https://www.biography.com/.image/t_share/MTgwOTcxNTk5NTIyOTY0ODQw/gettyimages-515410892.jpg" height="250" width="450"></a></span></p>
+            <p id="Marx3"><a href="http://www.google.com">Click Here Dummy <img src="https://www.biography.com/.image/t_share/MTgwOTcxNTk5NTIyOTY0ODQw/gettyimages-515410892.jpg" height="250" width="450"></a></p>
+            <p><a href="http://www.google.com">Click Here Dummy <img src="https://www.biography.com/.image/t_share/MTgwOTcxNTk5NTIyOTY0ODQw/gettyimages-515410892.jpg" height="250" width="450"></a></p>
+            <p><a href="http://www.google.com">Click Here Dummy <img src="https://www.biography.com/.image/t_share/MTgwOTcxNTk5NTIyOTY0ODQw/gettyimages-515410892.jpg" height="250" width="450"></a></p>
+            <p><a href="#top">Get up there</a></p><!-- This anchor tag takes you to the top -->
+            <p><a href="#Marx3">Third Marx</a></p>
+        </tbody>
+        <hr>
+        </table>
+<!-- HTML Entities -->
+        <!-- A website with <> symbols and an "a" tag -->&lt;a href="http://google.com"&gt;
+        <!-- copyright --> &copy;
+        <!-- registered trademark --> &reg;
+
+<!-- Iframes -->
+        <hr>
+         <iframe src="http://ecowebhosting.co.uk"></iframe><!-- just add the website src -->
+<!-- embedding media -->
+        <hr>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qMIS2BaDilY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- inline CSS (Cascading Style Sheets) example -->
+        <hr>
+            <p style="color: darkblue;font-size: 200%;"> Sleep The Band</p><!-- Text is styled to DarkBlue at 200% font size -->
+        <hr>
+<!-- Playing with Divs -->   
+        
+        <div id="first-section">
+            <p> this is practice with divs </p>
+            <p> this is practice with divs </p>
+        </div>
+
+<!-- CSS colors -->
+            <p>browser colors are pre-selected</p>
+            <p>alpha numeric color codes are for very specific color changes</p>
+            <p>color-zilla is a great resource - pick any color from any page</p>
+<!-- Floating in CSS -->
+            <p>float right positions a box all the way to the furthest right side of the page</p>
+            <p>float left positions the box to the left, if both boxes need to be next to each other, set both to float left</p>
+            <p>when no float is applied, the content goes with the flow of the page</p>
+            <p>to position content underneath two floated boxes, apply "clear: both" to position the third box below to floated boxes</p>
+        <div id="firstSec">
+            <p>look mom, I am floating left</p>
+        </div>
+        <div id="secondSec">
+            <p>look mom I am floating right</p>
+        </div>
+        <div id="notFloat">
+            <p>screw you both, I am not floating</p>
+        </div>
+    <hr>
+<!-- CSS Positioning -->
+        <div id="positioning">
+            <h2>Positioning</h2>
+            <h3>Relative positioning</h3>
+            <p>set the position to relative: positions relative to where it would normally be. add "left" or "right" and add a px of distance (including negative numbers)</p>
+            <p>to move up and down -  add the "top" property</p>
+            <p>note that "top" basically adds a margin-like gap to the top, essentially moving the box down</p>
+            <h3> The Z index</h3>
+            <p>to change elements from being in front of another to behind or visa versa, set the z index.</p>
+            <p>the element with the highest z index will be positioned in the front.</p>
+            <h3>Opacity</h3>
+            <p>how opaque an element appears (how see-through it is)</p>
+            <p>the <strong>bigger</strong> the number the more see-through it is.</p>
+            <h3>Absolute positioning</h3>
+            <p>removes the element out of the flow of the page and positions it in a default position (top left).</p>
+            <p>this positions the element over the top of everthign else in the page</p>
+            <h3>Fixed positioning</h3>
+            <p>the element stays in position regardless of scrolling behavior</p>
+        </div>
+<!-- CSS Margins -->
+        <div id="margins">
+            <h2>Margins</h2>
+            <p>the margin encircles the elements</p>
+            <h3>Specific Margins</h3>
+            <p>you can make each side of the box to different margins as desired (top, right, bottom, left)</p>
+            <p>to set an individual margin, select margin-"whichever side".</p>
+        </div>
+<!-- CSS Padding -->
+        <div id="padding">
+            <h2>Padding</h2>
+            <p>works on the inside of an element rather than the outside (margins=outisde).</p>
+            <p>provides spacing within the element, between the margin and the content.</p>
+            <p>works identically to margins (top, right, bottom, left)</p>
+            <p>when a width of pixels is set, padding <strong>ADDS </strong>to the overall pixel count.</p>
+            <h3>pro-tip</h3>
+            <p>set the margin and the padding for the body to - 0 before adding styling.</p>
+            <p>use a CSS reset to make sure your styling translates to various browsers.</p>
+        </div>
+<!-- CSS Borders -->
+        <div id="borders">
+            <h2>Borders</h2>
+            <p>can be added in one line (size, color, and type)</p>
+            <p>you can alter each border and they flow in the same way as the others (top, right, bottom, left).</p>
+            <h3>Border Radius</h3>
+            <p>adds a radius to the border.</p>
+            <p>border radius of 50% makes the box a circle.</p>
+        </div>
+<!-- CSS Fonts -->
+        <div id="fonts">
+            <h2>Fonts</h2>
+            <h3>Font-Family</h3>
+            <p>the type of font to be used (times, san serif, arial, etc.)</p>
+            <p>if you see three font names, the subsequent font names are the "fallback" fonts should a browser not support the initially chosen one.</p>
+            <p>look up websafe fonts and google fonts.</p>
+            <h3>Google fonts</h3>
+            <p>simply cut and paste the link from the selected font and place within a link tag in the head.</p>
+            <p>replace the font family with the provided code.</p>
+        </div>
+<!-- CSS Styling Text -->
+        <div>
+            <h2>Styling Text</h2>
+            <h3>Bold Text</h3>
+            <p>set "font-weight" to bold.</p>
+            <h3>Italic</h3>
+            <p>Set the "font-style" to italic.</p>
+            <p>to make a line of text BOTH bold and italic set a "span" class and set the p-class to italic.</p>
+            <h3>Underlined</h3>
+            <p>set "text-decoration" to underlined.</p>
+            <h3>No stylling</h3>
+            <p>to remove underlining for links set "a" and "text-decoration" to none.</p>
+            <h3>:hover</h3>
+            <p>this pseudo selector will style the link when the mouse hovers over it.</p>
+            <h3>Text Size</h3>
+            <p>set "font-size" to whatever size you choose ex: 200% = twice the normal size.</p>
+        </div>
+<!-- CSS Text Alignment -->
+        <div>
+            <h2>Text Align</h2>
+            <p>text align will align the text to the specified side of the PARENT element.</p>
+            <p>text align is set to the left by default</p>
+            <h3>Justified</h3>
+            <p>stretches the text all the way to the edge of the page</p>
+            <h3>Lorem Ipsum</h3>
+            <p>use this to populate areas of the webpage with random text that appears to be naturally written.</p>
+        </div>
+<!-- CSS Styling Links -->
+        <div>
+            <h2>Styling Links</h2>
+            <h3>Opening in a new tab</h3>
+            <p>set the "target" attribute of the link to "_blank".</p>
+            <h3>:Vistied</h3>
+            <p>changes the color of the links that have been clicked to a different color by applying the pseudo class of "":visited"</p>
+        </div>
+
+    </body>
+</html>
