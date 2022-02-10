@@ -27,7 +27,7 @@ if (Array.isArray(names)){
 
   // looping over an array with a for loop
 
-    // looping an array with forEach
+  // looping an array with forEach
 
   // traversing a linked list
 
