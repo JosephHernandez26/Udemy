@@ -143,7 +143,7 @@ yearsUntilRetire11(1982, 'Hannah');
 //-----------------------------------------------//
 // ***** CODE CHALLENGE 1 **** //
 //-----------------------------------------------//
-
+// todo
 // 1. write an arrow function called calcAvg that calculates 3 scores
 // 2. use the function to calculate averages for both teams
 // 3. write a function called checkWinner that takes in the scores as params
@@ -229,3 +229,40 @@ console.log(ages, ages2, ages3);
 const allAges = [calcAge01(years01[0]), calcAge01(years01[1]),
 calcAge01(years01[years01.length - 1])];
 console.log(allAges);
+
+//-----------------------------------------------//
+// ***** CODE CHALLENGE **** //
+//-----------------------------------------------//
+/* Write a function called calcTip
+- create an array called bills containing the test data
+- create an array called tips containing the tip value for each bill 
+from the function created before
+- create an array called total containing total values
+TEST DATA: 125, 55, 44
+*/
+
+// function calcTip (value) {
+//   let bills = [125, 55, 44];
+//   let tips = [];
+//   for (i = 0; i < bills.length; i++) {
+//     if (bills[i] <= 50) {
+//      tips.push(bills[i] * .15);
+//      console.log(tips);
+//     } else if (bills[i] >= 50) {
+//       tips.push(bills[i] * .20);
+//       console.log(tips);
+//     }
+//   } 
+// }
+
+const calcTip = function(bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 :
+  bill * 0.20;
+}
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(bills, tips);
+
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+console.log(bills, tips, totals);

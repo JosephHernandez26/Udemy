@@ -172,3 +172,50 @@ collectOddValues([1, 2, 3, 4, 5]);
 // step 8: [3].concat([5])
 // step 9: [1].concat([3, 5])
 // step 10: [1, 3, 5]
+
+// const challenge = (root,timesIveTraversedAnEdge, targetValue) => {
+
+//   if(!root){// base case: when the recursion stops
+//       return;
+//   }
+//   // recursive case - where the recursion happens
+
+//   // main part of the code
+//   if(!root.left && !root.right) {
+//       console.log(root.value,timesIveTraversedAnEdge);
+//   }
+
+//   // recursion
+//   // this line below is adding to the stack 
+//   challenge(root.left, timesIveTraversedAnEdge + 1); // stack frame 
+//   challenge(root.right, timesIveTraversedAnEdge + 1); // stack frame 
+//   // if this line is reached something is removed from the stack 
+// };
+// // next step: 
+// challenge(someRandomTree, 0);
+
+//--------
+// Vinicio's code challenges
+//--------
+
+
+const challenge = (root,timesIveTraversedAnEdge, targetValue) => {
+
+  if(!root){// base case: when the recursion stops
+      return;
+  }
+  // recursive case - where the recursion happens
+
+  // main part of the code
+  if(!root.left && !root.right) {
+      console.log(root.value,timesIveTraversedAnEdge);
+  }
+
+  // recursion
+  challenge(root.left, timesIveTraversedAnEdge + 1); // stack frame - push in stack
+  challenge(root.right, timesIveTraversedAnEdge + 1); // stack frame - push in stack
+  // if you reach this line. this is removing somethig from the stack
+};
+// next step: do this problem for everything that's not a leaf
+
+challenge(someRandomTree, 0);

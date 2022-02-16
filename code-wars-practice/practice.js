@@ -20,7 +20,11 @@ if (Array.isArray(names)){
   }
 
   // creating a regular function
-
+/* function doesThings() {
+  doSomething;
+  return somethingElse;
+}
+doesThings();
   // creating an arrow function
 
   // same as the previous 2 but with arguments
