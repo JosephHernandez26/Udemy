@@ -35,7 +35,7 @@ startDay(); // Called first -> goes to the bottom of the stack (1)
 
 // functions are added first to the top, then removed from the top
 
-/// Recursive functions ///
+/// **Recursive functions** ///
 
 // Base case -> where recursion stops
 // Recursive call -> Different input
@@ -68,13 +68,13 @@ function sumRange(num) {
 sumRange(3);
 
 /* The Walk-thru
-3 + sumRange(2) // step one
-  2 + sumRange(1) // step two 
-    return 1 // step three
-// step four --> sumRange(1) is simplified to just 1
-// step five --> 2 + 1 (the simplified sumRange)
-// step six --> 3 + 3 (the simplified sumRange from step one and two)
-// return 6
+3 + sumRange(2) //--step one
+  2 + sumRange(1) //--step two 
+    return 1 //--step three
+   sumRange(1) is simplified to just 1 //--step four
+   2 + 1 (the simplified sumRange) //--step five
+   3 + 3 (the simplified sumRange from step one and two) //--step six
+  return 6
 */
 
 // writing FACTORIAL iteratively //
@@ -112,11 +112,9 @@ function outer (input) {
     // modify the OuterScopedVariable
     helper(helperInput--)
   }
-
   helper(input)
 
   return outerScopedVariable;
-
 }
 
 //
@@ -173,25 +171,25 @@ collectOddValues([1, 2, 3, 4, 5]);
 // step 9: [1].concat([3, 5])
 // step 10: [1, 3, 5]
 
-// const challenge = (root,timesIveTraversedAnEdge, targetValue) => {
+const challenge = (root,timesIveTraversedAnEdge, targetValue) => {
 
-//   if(!root){// base case: when the recursion stops
-//       return;
-//   }
-//   // recursive case - where the recursion happens
+  if(!root){// base case: when the recursion stops
+      return;
+  }
+recursive case - where the recursion happens
 
-//   // main part of the code
-//   if(!root.left && !root.right) {
-//       console.log(root.value,timesIveTraversedAnEdge);
-//   }
-
-//   // recursion
-//   // this line below is adding to the stack 
-//   challenge(root.left, timesIveTraversedAnEdge + 1); // stack frame 
-//   challenge(root.right, timesIveTraversedAnEdge + 1); // stack frame 
-//   // if this line is reached something is removed from the stack 
-// };
-// // next step: 
+main part of the code
+  if(!root.left && !root.right) {
+      console.log(root.value,timesIveTraversedAnEdge);
+  }
+}
+// recursion
+// this line below is adding to the stack 
+  challenge(root.left, timesIveTraversedAnEdge + 1); // stack frame 
+  challenge(root.right, timesIveTraversedAnEdge + 1); // stack frame 
+// if this line is reached something is removed from the stack 
+//
+// next step: 
 // challenge(someRandomTree, 0);
 
 //--------
@@ -214,8 +212,9 @@ const challenge = (root,timesIveTraversedAnEdge, targetValue) => {
   // recursion
   challenge(root.left, timesIveTraversedAnEdge + 1); // stack frame - push in stack
   challenge(root.right, timesIveTraversedAnEdge + 1); // stack frame - push in stack
-  // if you reach this line. this is removing somethig from the stack
-};
+  // if you reach this line. this is removing something from the stack
+}
 // next step: do this problem for everything that's not a leaf
 
 challenge(someRandomTree, 0);
+

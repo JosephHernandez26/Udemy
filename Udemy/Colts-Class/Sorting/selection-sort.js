@@ -106,3 +106,5 @@ selectionSort([0, 1, 9, 6, 33, -2, 5]);
 (7) [-2, 0, 1, 5, 6, 9, 33]
 */
 
+// Time complexity is O(n2)
+// with each change to the array the iterations increase n x n
