@@ -138,10 +138,11 @@ class HashTable {
   set(key, value) {
     let index = this._hash(key);
     // return index <-- use this to test the code
+
     // this adds a check
     if (!this.keymap[index]) {
     // checking to see if nothing is there (!this)
-    this.keyMap[index] = []; // <--- this is placing the empty array (if nothing is there)
+    this.keyMap[index] = []; // <--- this is setting the empty array (if nothing is there)
     }
     // this will push the key-value pair into the parent array
     this.keyMap[index].push([key, value]);
@@ -154,7 +155,15 @@ class HashTable {
     // [, , ,[[key, value], [key, value]] , , , , ] <---if there is something there
   }
   get(key) {
-
+    let index = this._hash(key); // hash the key
+    if (this.keyMap[index]) { // check the index - if empty, return undefined 
+      for (let i = 0; i < this.keyMap[index].length; i++) { // loop over the keyMap
+        if (this.keyMap[index][i][0] === key) { // is the key matching my key?
+          return this.keyMap[index][i][1]; // return the value I am looking for
+        }
+      }
+    }
+    return undefined; // <--returns if there is nothing in the keyMap
   }
 }
 
@@ -162,3 +171,85 @@ class HashTable {
 // ht.set('hello world', 'goodbye!!')
 // output:
 // 11
+
+// ** Hash Table Adding Keys/Values **
+// ----- Methods --------
+// KEYS
+//  - loops through the hash table array and returns an array of keys in the table
+//  
+// VALUES
+//  - Same as keys but with values
+
+// --But what about duplicate values?--
+
+
+class HashTable {
+  constructor(size = 53) {
+    this.keyMap = new Array(size);
+  }
+
+  _hash(key) {
+    let total = 0;
+    let PRIME_NUMBER = 31;
+    for (let i = 0; i < Math.min(key.length, 100); i++) {
+      let char = key[i];
+      let value = char.charCodeAt(0) - 96;
+      total = (total + PRIME_NUMBER + value) % this.keyMap.length;
+    }
+    return total;
+  }
+
+  set(key, value) {
+    let index = this._hash(key);
+    if (!this.keymap[index]) {
+    this.keyMap[index] = [];
+    }
+    this.keyMap[index].push([key, value]);
+  }
+
+  get(key) {
+    let index = this._hash(key); 
+    if (this.keyMap[index]) { 
+      for (let i = 0; i < this.keyMap[index].length; i++) { 
+        if (this.keyMap[index][i][0] === key) { 
+          return this.keyMap[index][i][1];
+        }
+      }
+    }
+    return undefined;
+  }
+  // ** Implements Keys **
+  keys(){
+    let keysArray = [];
+    for (let i = 0; i < this.keyMap.length; i++) {
+      if (this.keyMap[i]) {
+        for (let j = 0; j < this.keyMap[i].length; j++) {
+          if (!keysArray.includes(this.keyMap[i][j][0])) { // set to 0, thats where the keys live
+            keysArray.push(this.keyMap[i][j][0])
+          }
+        }
+      }
+    }
+    return keysArray;
+  }
+  // ** Implements Values **
+  // Do this first because this is where we worry about duplicate data
+  values() {
+    let valuesArray = []; // <-- sets the empty array for values storage
+    for (let i = 0; i < this.keyMap.length; i++) { // loops over the entire keyMap
+      if (this.keyMap[i]) { // this is checking to see if anything is there
+        console.log(this.keyMap[i]); // run this to get a peek at the hash table contents
+        for (let j = 0; j < this.keyMap[i].length; j++) { // this.keyMap[i] refers to each subArray at that index
+          
+          // ** before we push lets check for duplicate values **
+          if (!valuesArray.includes(this.keyMap[i][j][1])) { //if it does NOT include the value (!)
+          // push the value
+          valuesArray.push(this.keyMap[i][j][1]); //keyMap[i][j] will show everything
+          // using [1] isolates the value to return
+          }
+        }
+      }
+    }
+    return valuesArray;
+  }
+}
