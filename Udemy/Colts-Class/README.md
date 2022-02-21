@@ -13,6 +13,6 @@
 
 ### Visual Examples of Data Structures
 
-![The Array](./arrays.png)
-![The Linked List](./singly-linked-list.png)
-![The Hash Table](./hash-table.png)
+![The Array](./UMLs/arrays.png)
+![The Linked List](./UMLs/singly-linked-list.png)
+![The Hash Table](./UMLs/hash-table.png)
