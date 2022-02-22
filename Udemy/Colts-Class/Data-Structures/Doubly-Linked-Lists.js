@@ -133,3 +133,105 @@ class DoublyLinkedList {
   // }
 }
 
+// ----------------------
+// **The Shift() Method**
+// ----------------------
+// Removes a Node from the **BEGINNING** of the linked list
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = next;
+    this.previous = previous;
+  }
+}
+
+class DoublyLinkedList3 {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+// ** Corrected Code **
+shift() {
+  if (this.length === 0) return undefined;
+  let oldHead = this.head;
+  if (this.length === 1) {
+    this.head = null;
+    this.tail = null;
+  } 
+  this.head = oldHead.next;
+  this.head.previous = null;
+  oldHead.next = null;
+  this.length --;
+  return oldHead; 
+}
+
+// ** My Attempt **
+// shift() {
+//   let deadHead = this.head; // ** declare this AFTER the edge case
+//   if (this.length === 0) return undefined;
+//   let deadHead = this.head // ** declare here 
+//   if (this.length === 1) {
+//     this.head = null;
+//     this.tail = null;
+//   } else { // ** else is not necessary
+//   deadHead.next = this.head;
+//   this.head.previous = null;
+//   deadHead.next = null;
+//   }
+//   this.length --;
+//   return deadHead;
+// }
+
+}
+
+// ----------------------
+// **The UN-Shift() Method**
+// ----------------------
+// inserts a new head at the beginning of the linked list
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = next;
+    this.previous = prev;
+  }
+}
+
+class DoublyLinkedList4 {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+// ** Corrected Code **
+  unShift(value) {
+    let newNode = new Node (value);
+    if (!head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.head.prev = newNode;
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+    this.length ++;
+    return this;
+  }
+// ** My Attempt **
+// unShift(value) {
+//   let newNode = new Node (value);
+//   if (this.length === 0) {
+//     newNode = this.head; // ** not sure if the order matters this.head = newNode;
+//     this.tail = newNode; // ** this.tail = NewNode; (this is correct)
+//   } else {
+//     newNode = this.head.prev;
+//     newNode.next = this.head;
+//     this.head = newNode;
+//   }
+//   this.length ++;
+//   return this;
+// }
+}
+
