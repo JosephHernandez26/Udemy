@@ -17,7 +17,7 @@
 
 //++++++++++++++++++++ **PLEASE NOTE** ++++++++++++++++++++++++++++++++++++++
 // ** The keyword 'this' inside all of the instance methods and constructors,
-// ** refers to the object created from the class (aka 'an instance).
+// ** refers to the object created from the class (aka 'an instance').
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 class Student {

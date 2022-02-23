@@ -160,4 +160,61 @@
 
 - Neither of these are very important at all for Stacks.
 
+### Queues
 
+- Very similar to Stacks in that it is a data structure where you put data in and remove data out.
+- Instead of LIFO a queue is **FIFO**
+  - First In First Out.
+  - The first in the line is the first out the door.
+
+
+#### How Are Queues Used?
+
+- We use Queues all the time, even outside of the computer
+  - If you've ever stood in a line, you were literally in a queue.
+
+- How Queues are used in programming:
+  - Background tasks
+  - Uploading resources
+  - Printing/task processing
+
+#### Queues Visual
+
+![Queue](./UMLs/Queue.png)
+
+#### Creating a Queue Class
+
+![Queue Class](./UMLs/queue-class.png)
+
+#### Queues Using Arrays
+
+- This is not the Ideal way of using the queue as this requires the entire array to be re-indexed every time something is added.
+
+- Use `Push()` to add to the end coupled with `Shift()` to remove from the beginning.
+- Use `Unshift()` to add to the beginning coupled with `Pop()` to remove from the end.
+
+![Queues as an Array](./UMLs/queues-arrays.png)
+
+#### Using the Enqueue Method
+
+![enqueue](./UMLs/enqueue.png)
+
+#### Using the Dequeue Method
+
+![dequeue](./UMLs/dequeue.png)
+
+### Queue BIG-O
+
+#### **Insertion - O(1)**
+
+- `enqueue()` is used to insert, and they are constant time.
+- In an Array we would use `push()` (to add to the end) and `unshift()` (to add to the beginning) both require the Array to re-index which means it is **O(n)** and not ideal.
+
+#### **Deletion - O(1)**
+
+- `dequeue()` is used to delete from a queue, and it is constant time.
+- Again, in an Array we would use `pop()` (to remove from the end) and `shift()` (to remove from the beginning) both require the Array to re-index which means it is **O(n)** and not ideal.
+
+#### **Searching** and **Access** both are **O(n)**
+
+- These aren't very important because, like Stacks, these aren't really used.

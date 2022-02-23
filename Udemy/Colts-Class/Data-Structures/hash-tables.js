@@ -9,6 +9,7 @@
 // - Takes in data of an arbitrary size as input
 // -- Converts the data to a fixed size as output
 // --- it is a *fixed* size. ALWAYS
+// not known as an array - known as a bucket
 
 //---What Makes a Good Hash Function?--
 // 1. It's fast (constant time / O(n))
@@ -181,7 +182,6 @@ class HashTable {
 //  - Same as keys but with values
 
 // --But what about duplicate values?--
-
 
 class HashTable {
   constructor(size = 53) {
