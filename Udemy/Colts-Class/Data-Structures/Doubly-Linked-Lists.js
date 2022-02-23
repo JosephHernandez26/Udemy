@@ -235,3 +235,69 @@ class DoublyLinkedList4 {
 // }
 }
 
+// ----------------------
+// **The Get() Method**
+// ----------------------
+// Retrieves a Node by its position in the Linked List
+// it takes a number, index position, and returns that value.
+// More importantly it takes in the number, traverses that many times,
+// and returns the value at that index
+// **BUT**
+// there is a significant improvement we can make using a Doubly Linked List
+// that can't be used with a Singly Linked List
+// We can work from the END using .prev and work **backwards**.
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = next;
+    this.previous = prev;
+  }
+}
+
+class DoublyLinkedList5 {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+// ** Corrected Code **
+  get(index) {
+    if (index < 0 || index >= this.length) return null;
+    if (index <= this.length / 2){
+      console.log('WE ARE AT THE START')
+      let listCount = 0;
+      let currentNode = this.head;
+      while (listCount != index) {
+        currentNode = currentNode.next;
+        listCount ++;
+      }
+      return currentNode;
+    } else {
+      console.log('WE ARE AT THE END')
+      let listCount = this.length - 1;
+      let currentNode = this.tail;
+      while (listCount != index) {
+        currentNode = currentNode.prev;
+        listCount --;
+      }
+      return currentNode;
+    }
+  }
+  // ** My Attempt **
+  // get(index) {
+  //   if (index < 0 || index >= this.length) return null;
+  //   if (index <= this.length / 2) {
+  //     for (i = 0; i < this.length / 2; i++) {
+  //       return index[i];
+  //     } 
+  //   } else {
+  //     if (index > this.length / 2) {
+  //       for (j = this.length - 1; j < this.length / 2; j--) {
+  //         return index[j];
+  //       }
+  //     }
+  //   }
+  // }
+}
+
