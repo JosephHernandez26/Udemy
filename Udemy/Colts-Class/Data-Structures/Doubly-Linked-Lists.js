@@ -301,3 +301,69 @@ class DoublyLinkedList5 {
   // }
 }
 
+// ----------------------
+// **The Set() Method**
+// ----------------------
+// Changing the value of a Node based on its position in the linked list
+// Accepts a position/index and a value
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = next;
+    this.previous = prev;
+  }
+}
+
+class DoublyLinkedList6 {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+// ** Corrected Code **
+  set(index, value) {
+    let setNode = this.get(index);
+    if (setNode != null) {
+      setNode.value = value;
+      return true;
+    }
+    return false;
+  }
+  // ** My Attempt **
+  // set(index, value) {
+  //   let setNode = get(index); // ** remember the .this!
+  // if (setNode != null) {
+  //   setNode = value; // ** remember to reference the setNode's value.
+  //   return true;
+  // }    
+  // return false;
+  // }
+}
+
+// ----------------------
+// **The Insert() Method**
+// ----------------------
+// Adds a new Node to the linked list at a specific position (index)
+// Accepts a position (index) and a value
+
+class Node {
+  constructor(value) {
+    this.next = next;
+    this.value = value;
+  }
+}
+
+class SinglyLinkedList7 {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+  // **Corrected Code**
+  // ** My Attempt **
+  insert() {
+    
+  }
+
+}
