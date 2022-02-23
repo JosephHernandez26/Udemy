@@ -63,4 +63,29 @@
 **BUT**
 - Doubly linked lists have an **additional pointer** that points to the next Node **AND** the previous Node.
 
+### Doubly Linked-Lists BIG-O
+
 ![Doubly-Linked-List](./UMLs/doubly-linked-list.png)
+
+#### **Insertion** = O(1)
+  
+- Takes constant time, regardless of the length of the list.
+
+#### **Removal** = can either be O(1)
+
+- is **ALWAYS** constant.
+
+#### **Searching** = O(n)
+
+- as the list grows, so grows the number of operations.
+
+#### **Access** = O(n)
+
+- as the list grows, so grows the number of operations.
+
+#### Doubly Linked Lists vs. Singly Linked Lists
+
+- DLL and SLL are almost identical, except the DLL has a pointer to the previous Node. This allows us to access data from the end and work backwards, SLL can only begin from the beginning.
+- DLL are better for finding Nodes, and they do it in half the time!
+  - That said, the extra pointer *does* take up extra memory, which if space is a concern, this should be accounted for.
+**COMMON INTERVIEW QUESTION RESPONSE** DLLs are faster and easier to navigate but they come at a space cost.
