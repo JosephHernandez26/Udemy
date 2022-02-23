@@ -89,3 +89,75 @@
 - DLL are better for finding Nodes, and they do it in half the time!
   - That said, the extra pointer *does* take up extra memory, which if space is a concern, this should be accounted for.
 **COMMON INTERVIEW QUESTION RESPONSE** DLLs are faster and easier to navigate but they come at a space cost.
+
+### Stacks
+
+- Stacks is a concept and there are multiple ways of using them.
+  - Linked Lists
+  - Arrays
+- A **LIFO** Data Structure
+  - Last In First Out
+  - The last element added to the stack is the first element removed from the stack.
+  - Think of it as a stack of plates, you are gonna remove the first plate on top.
+
+#### Stacks Visual 
+
+![Stacks Using Linked Lists](./UMLs/stacks-LLS.png)
+#### How Are Stacks Used?
+
+- Managing Function Invocations
+- Undo & Redo Functionality
+- Routing (*search history objects*) is treated like a stack
+  - The pages you've viewed or the routes you have visited
+  - They are also in algorithms to store the history of things you want to come back to
+  - A code example:
+
+![Algorithm Example](./UMLs/stacks-algo-example.png)
+
+#### Stacks With Arrays 
+
+- Using Arrays are the easiest way to add and remove data from a stack
+
+**Valid Uses for adding and removing data**
+
+- `stack.push` - adds to the end of the array.
+- `stack.pop` - removes the last item in the array.
+- `stack.shift` - adds to the end of the array.
+- `stack.unShift` - removes the last item in the array.
+-  A coding example:
+
+![Stacks with Arrays](./UMLs/stack-array.png)
+
+#### Stacks with Linked Lists
+
+- Creating the Stack class.
+
+![stack class](./UMLs/stack-class.png)
+
+- Using the `Push()` method to add to the Stack list.
+
+![Stack Push](./UMLs/stack-push.png)
+
+- Using the `Pop()` method to remove the last item from the Stack list.
+
+![Stack Pop](./UMLs/stacks-pop.png)
+
+### Stacks BIG-O
+
+#### **Insertion** = O(1)
+  
+- The `Push()` method is always constant time.
+- Takes constant time, regardless of the length of the list.
+- We are only pushing to the beginning.
+
+#### **Removal** = can either be O(1)
+
+- The `Pop()` Method is always constant time.
+- is **ALWAYS** constant.
+- We are only popping (*removing*) from the beginning.
+
+#### **Searching** = O(n) & **Access** = O(n)
+
+- Neither of these are very important at all for Stacks.
+
+
