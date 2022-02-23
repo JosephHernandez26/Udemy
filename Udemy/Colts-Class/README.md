@@ -64,4 +64,3 @@
 - Doubly linked lists have an **additional pointer** that points to the next Node **AND** the previous Node.
 
 ![Doubly-Linked-List](./UMLs/doubly-linked-list.png)
-

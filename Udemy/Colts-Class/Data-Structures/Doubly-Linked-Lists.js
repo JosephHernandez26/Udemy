@@ -360,10 +360,108 @@ class SinglyLinkedList7 {
     this.tail = null;
     this.length = 0;
   }
-  // **Corrected Code**
-  // ** My Attempt **
-  insert() {
-    
-  }
+  // ** Refactored Corrected Code **
+  // insert (index value) {
+  //   if (index < 0 || index > this.length) return false;
+  //   if (index === 0) return !!this.unshift(value);
+  //   if (index === this.length) return !!this.push(value);
 
+  //   let newNode = new Node(value);
+  //   let beforeNode = this.get(index - 1);
+  //   let afterNode = beforeNode.next;
+
+  //   beforeNode.next = newNode, newNode.prev = beforeNode;
+  //   newNode.next = afterNode, afterNode.prev = newNode;
+  //   this.length ++;
+  //   return true;
+  // }
+  // **Corrected Code**
+  insert(index, value) {
+    if (index < 0 || index > this.length) return false;
+    if (index === 0) return this.unshift(value);
+    if (index === this.length) return this.push(value);
+    let newNode = new Node (value);
+    let beforeNode = this.get(index -1);
+    let afterNode = beforeNode.next;
+    beforeNode.next = newNode;
+    newNode.prev = beforeNode;
+    newNode.next = afterNode;
+    afterNode.prev = newNode;
+    this.length ++;
+    return true;
+    }
+  // ** My Attempt **
+  // insert(index, value) {
+  //   if (index < 0 || index > this.length) return false;
+        // ** declare the variables together AFTER the edge cases (line 402)
+  //   let newNode = new Node (index, value) // ** we are just passing the value here
+  //   let currentNode = newNode.index - 1; // ** so close put this.get(index -1)
+  //   let nextNode = newNode.index + 1; // ** almost make this, currentNode.next
+  //   if (index === 0) return this.unShift(currentNode);
+  //   if (index === this.length) { // ** didn't need to open brackets here
+  //     this.push(newNode);
+  //     this.get(currentNode);
+  //     currentNode.next = newNode;
+  //     newNode.prev = currentNode;
+  //     newNode.next = nextNode;
+  //     nextNode.prev = newNode;
+  //   } // ** brackets not needed
+  //   this.length ++;
+  //   return true;
+  // }
+}
+
+// ----------------------
+// **The Remove() Method**
+// ----------------------
+// Removing a Node from the linked list at a specific position (index).
+// Accepts an index.
+
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = next;
+  }
+}
+
+class SinglyLinkedList8 {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+  // ** Corrected Code **
+  remove(index) {
+    if (index < 0 || index >= this.length) return false;
+    if (index === 0) return this.shift();
+    if (index === this.length) return this.pop();
+
+    let removedNode = this.get(index);
+    removedNode.prev.next = removedNode.next; // ** this is just another way to do it
+    removedNode.next.prev = removedNode.prev; // ** the way I did it works as well
+    removedNode.next = null;
+    removedNode.prev = null;
+    this.length --;
+    return removedNode;
+  }
+    // ** My Attempt **
+// remove(index, value) {
+//   if (index < 0 || index >= this.length ) return undefined;
+//   if (index === 0) return this.shift(value); // ** no need to pass anything here
+//   if (index === this.length - 1) return this.pop(value); // **no need to pass the value 
+
+//   let foundNode = new Node (value); // **only need index here, node already exists
+// ** this is how this variable should be declared:
+// **let foundNode = this.get(index);
+//   let previousNode = foundNode.prev;
+//   let nextNode = foundNode.next;
+
+//   this.get(this.foundNode); // ** declared in the variable foundNode
+//   nextNode.prev = previousNode;
+//   previousNode.next = nextNode;
+//   foundNode.next = null;
+//   foundNode.prev = null;
+//   this.length --;
+//   return foundNode;
+// }
 }
