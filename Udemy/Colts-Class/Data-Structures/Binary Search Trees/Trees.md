@@ -85,7 +85,14 @@
 
 ![inserting](./../../UMLs/insert.png)
 
-#### The Code 
+#### Code Example
 
 ![insert method](./../../UMLs/insert-method.png)
 
+### Searching a BST (or Find, same same)
+
+![The Search](./../../UMLs/searching-BST.png)
+
+#### Code Example
+
+![search](./../../UMLs/search-code.png)
