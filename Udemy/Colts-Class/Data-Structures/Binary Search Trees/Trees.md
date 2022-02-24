@@ -96,3 +96,23 @@
 #### Code Example
 
 ![search](./../../UMLs/search-code.png)
+
+### BST BIG-O
+
+![BIG-O](./../../UMLs/big-o.png)
+
+**Insertion** - **O(log n)**
+
+**Searching** - **O(log n)**
+
+![BST BigO](./../../UMLs/BST-bigO.png)
+
+#### **NOTE** The above is **NOT** Guaranteed!
+
+- In the unlikely, though possible, event of a ONE-SIDED search tree and you had to traverse and the tree was 1000 Nodes long (or larger even). Your time complexity would increase with the size of the tree, making the **BIG-O** = **O(n)** which is far from ideal.
+
+![no guarantee](../../UMLs/BST-NoGuarantee.png)
+
+- Ideally, we would want to reassign the root to be one of the larger values and restructure the BST.
+- On **Average** the BIG-O is going to be O(log n) for BST's though.
+
