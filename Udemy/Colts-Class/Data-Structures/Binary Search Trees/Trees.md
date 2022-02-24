@@ -36,29 +36,29 @@
 
 ### The Tree - A Visual
 
-![The Tree](./the-tree.png)
+![The Tree](./../../UMLs/tree.png)
 
 ### Types of Trees
 
 - **HTML DOM (Document Object Model)**
 
-![HTML](./HTML.png)
+![HTML](./../../UMLs/HTML.png)
 
 - **Network Routing**
 
-![Network](./network.png)
+![Network](./../../UMLs/network.png)
 
 - **Artificial Inteligence (AI)**
 
-![AI](./AI.png)
+![AI](./../../UMLs/AI.png)
 
 - **Abstract Syntax Tree**
 
-![Abstract Syntax Tree](./abstract.png)
+![Abstract Syntax Tree](./../../UMLs/abstract.png)
 
 - **Folders in Operating Systems**
 
-![folders](./folders.png)
+![folders](./../../UMLs/folders.png)
 
 - **JSON**
 
@@ -71,21 +71,21 @@
 - Every Node that is *less* than the Parent Node, is **always** located to the **left**.
 - Every Node that is *greater* than the Parent Node, is **always** located to the **right**.
 
-![BST](./BST.png)
+![BST](./../../UMLs/BST.png)
 
 #### Creating the BST class
 
-![BST Class](./BST-Class.png)
+![BST Class](./../../UMLs/BST-Class.png)
 
 #### Creating the Tree
 
-![create the tree](./tree.png)
+![create the tree](./../../UMLs/tree.png)
 
 ### The Insert() Method
 
-![inserting](./insert.png)
+![inserting](./../../UMLs/insert.png)
 
 #### The Code 
 
-![insert method](insert-method.png)
+![insert method](./../../UMLs/insert-method.png)
 
