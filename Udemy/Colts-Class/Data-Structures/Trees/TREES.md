@@ -2,7 +2,7 @@
 
 ## Data Structures
 
-### Trees
+## Trees
 
 - Data Structures that consist of Nodes in a Parent/Child relationship.
 - Trees are non-linear
@@ -40,29 +40,29 @@
 
 ### Types of Trees
 
-- **HTML DOM (Document Object Model)**
+#### **HTML DOM (Document Object Model)**
 
 ![HTML](./../../UMLs/HTML.png)
 
-- **Network Routing**
+#### **Network Routing**
 
 ![Network](./../../UMLs/network.png)
 
-- **Artificial Inteligence (AI)**
+#### **Artificial Inteligence (AI)**
 
 ![AI](./../../UMLs/AI.png)
 
-- **Abstract Syntax Tree**
+#### **Abstract Syntax Tree**
 
 ![Abstract Syntax Tree](./../../UMLs/abstract.png)
 
-- **Folders in Operating Systems**
+#### **Folders in Operating Systems**
 
 ![folders](./../../UMLs/folders.png)
 
-- **JSON**
+#### **JSON**
 
-### Binary Search Trees (BST)
+## Binary Search Trees (BST)
 
 - Optimized for searching.
   - Each Node can have at most **TWO** children.
@@ -101,9 +101,9 @@
 
 ![BIG-O](./../../UMLs/big-o.png)
 
-**Insertion** - **O(log n)**
+#### **Insertion** - **O(log n)**
 
-**Searching** - **O(log n)**
+#### **Searching** - **O(log n)**
 
 ![BST BigO](./../../UMLs/BST-bigO.png)
 
@@ -116,3 +116,47 @@
 - Ideally, we would want to reassign the root to be one of the larger values and restructure the BST.
 - On **Average** the BIG-O is going to be O(log n) for BST's though.
 
+## Traversing the Trees
+
+### Traversal Methods
+
+### Breadth-First-Search (BFS)
+
+- Searching the breadth of the tree, one layer at a time.
+  - Working across the tree.
+  - starting at the **root**
+  - traverse down to **root.left**,
+  - then from **root.left** to **root.right**,
+  - then down from **root.left** to **root.left.left**,
+  - then across to **root.left.right**,
+  - then across to **root.right.left**,
+  - then across to **root.right.right**...and so on.
+
+![breadth-first](../../UMLs/breadth-first.png)
+
+### BFS - Iteratively
+
+1. First step: Create a queue (this can be an array) and a Variable to store the values of Nodes visited.
+2. Place the Root Node in the queue you created.
+3. Loop for as long as there is anything in the queue.
+   1. Dequeue (*if using an array - this means shifting*) Node from the queue and push the value of the Node into the variable that you created for Node storage (*the list we are returning at the end*).
+   2. If there is a Left property on the Dequeued Node - add it to the queue.
+   3. If there is a Right property on the Dequeued Node - add it to the queue.
+
+### Depth First Search (DFS)
+
+- Searching the tree by going down, to the end of the tree.
+  - traverse down to the end vertically and then coming back up.
+- There are three main ways of utilizing the DFS method:
+
+#### 1. DFS - InOrder
+
+![InOrder](./../../UMLs/inOrder.png)
+
+#### 2. DFS - PreOrder
+
+![PreOrder](./../../UMLs/PreOrder.png)
+
+#### 3. DFS - PostOrder
+
+![PostOrder](./../../UMLs/PostOrder.png)
