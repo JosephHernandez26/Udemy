@@ -136,12 +136,20 @@
 
 ### BFS - Iteratively
 
-1. First step: Create a queue (this can be an array) and a Variable to store the values of Nodes visited.
+1. First step: Create a queue (this can be an array) and a Variable to store the values of Nodes visited (like a sort of to-do list).
 2. Place the Root Node in the queue you created.
 3. Loop for as long as there is anything in the queue.
    1. Dequeue (*if using an array - this means shifting*) Node from the queue and push the value of the Node into the variable that you created for Node storage (*the list we are returning at the end*).
    2. If there is a Left property on the Dequeued Node - add it to the queue.
    3. If there is a Right property on the Dequeued Node - add it to the queue.
+
+### BFS Step-By-Step Visual
+
+![BFS](./../../UMLs/BFS.png)
+
+### BFS Code Example
+
+![BFS Code](./../../UMLs/BFS-Code.png)
 
 ### Depth First Search (DFS)
 
