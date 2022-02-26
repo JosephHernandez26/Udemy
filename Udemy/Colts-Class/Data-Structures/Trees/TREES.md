@@ -1,14 +1,16 @@
-# Notes from Colt's Class
+# Notes - Colt Steele's Class
 
 ## Data Structures
 
 ## Trees
 
+![Structure](./../../UMLs/TreeStructure.png)
+
 - Data Structures that consist of Nodes in a Parent/Child relationship.
-- Trees are non-linear
-  - There are many paths you can take 
-- Nodes do not point to siblings
-- Trees only have one root
+- Trees are non-linear.
+  - There are many paths you can take.
+- Nodes do not point to siblings.
+- Trees only have one root.
 
 #### **ROOT**
 
@@ -157,7 +159,7 @@
   - traverse down to the end vertically and then coming back up.
 - There are three main ways of utilizing the DFS method:
 
-#### 1. DFS - PreOrder
+#### 1. DFS - Pre-Order
 
 1. Create a method called that takes in no arguments `postOrder()`,
 2. Create a variable (`nodeData`) to store the **visited** node values (`node.value`)
@@ -174,15 +176,15 @@
 
 ![PreOrder](./../../UMLs/PreOrder.png)
 
-#### DFS - PreOrder Step By Step Visual
+#### DFS - Pre-Order Step By Step Visual
 
 ![preOrder](./../../UMLs/DFS-preOrder.png)
 
-#### DFS - PreOrder Code Example
+#### DFS - Pre-Order Code Example
 
 ![preOrder-code](./../../UMLs/preOrder-code.png)
 
-#### 2. DFS - PostOrder
+#### 2. DFS - Post-Order
 
 - *This is basically the same as PreOrder, with a little order of operations tweak of the code*.
 
@@ -203,15 +205,66 @@
 
 ![PostOrder](./../../UMLs/PostOrder.png)
 
-#### DFS - PreOrder Step By Step Visual
+#### DFS - Post-Order Step By Step Visual
 
 ![postOrder](./../../UMLs/post-order.png)
 
-#### DFS - PreOrder Code Example
+#### DFS - Post-Order Code Example
 
 ![postOrder-code](./../../UMLs/PostOrder-Code.png)
 
-#### 3. DFS - InOrder
+#### 3. DFS - In-Order
 
 ![InOrder](./../../UMLs/inOrder.png)
 
+1. Create a method called that takes in no arguments `InOrder()`,
+2. Create a variable (`nodeData`) to store the **visited** node values (`node.value`)
+3. Create a variable (`current`) to store the root value as that is where we will start, ex: `let current = this.root;`,
+4. Create a helper function for traversing the BST that takes in a Node: `traverse(node)`,
+5. If there is a Node to the left: `if (node.left)`:
+     1. **explore** each Node using the helper function (`traverse()`) to traverse the left side of the BST `traverse(node.left)`,
+     2. Then traverse the BST completing the left side first, exploring both the left and right sides of each Node found,
+     3. When there is no `node.left` or `node.right` to explore on that Node,
+     4. Push the Node's value into the `nodeData` variable: `nodeData.push(node.value)`,
+     5. Then return (up) to the the last Node visited, and push that Node's value.
+     6. Traverse to the right of the Node, when there is no `node.left` or `node.right` to explore on that Node,
+     7. Push the Node's value and return to the Root,
+     8. Push the Root value.
+6. Then use the helper function to traverse the right side of the BST,
+7. Repeat the same operations (i - vi) for the right (`traverse(node.right)`) side of the BST until complete,
+8. Invoke the helper function passing the variable `current` in `traverse(current)`,
+9. Return the `nodeData` containing the Node values.
+
+#### DFS - In-Order Step By Step Visual
+
+![InOrder](./../../UMLs/DFS-InOrder.png)
+
+#### DFS - In-Order Code Example (The Verbose Way)
+
+![InOrder-code](./../../UMLs/InOrder-Code2.png)
+
+#### DFS - In-Order Code Example (The Straight Forward Way)
+
+![InOrder-code](./../../UMLs/InOrder-Code1.png)
+
+### BFS vs DFS BIG-O...So Which is better to use?
+
+- Short answer, it depends.
+- With regard to time complexity they are the same, we are visit every Node once.
+- Space complexity however, it depends on the structure of the tree itself.
+- **Remember**, we have a variable where we are storing all this data.
+  - more data = more space.
+
+#### BFS BIG-O
+
+![BFS Big-O](./../../UMLs/BFS-BigO.png)
+
+- **Time Complexity** is **O(1)** it is constant.
+- **Space Complexity** is **O(n)** as the tree (width) grows, so does the space required to store the data.
+
+#### DFS BIG-O
+
+![DFS Big-O](./../../UMLs/DFS-BigO.png)
+
+- **Time Complexity** is **O(1)** it is constant.
+- **Space Complexity** is **O(n)** as the tree (width) grows, so does the space required to store the data.

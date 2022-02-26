@@ -18,7 +18,7 @@ class BST {
   }
 
 //+++++++++++++++++++++++++++++++++++++++++
-// ****** DFS Pre Order Method *******
+// ****** DFS PreOrder Method *******
 //+++++++++++++++++++++++++++++++++++++++++
 // ** Colt's Code **
   DFSPreOrder() {
@@ -47,7 +47,7 @@ class BST {
   //   traverse(current);
 
 //+++++++++++++++++++++++++++++++++++++++++
-// ****** DFS Post Order Method *******
+// ****** DFS PostOrder Method *******
 //+++++++++++++++++++++++++++++++++++++++++
 // ** Colt's Code **
 DFSPostOrder(){
@@ -73,4 +73,36 @@ DFSPostOrder(){
 //   traverse(current);
 //   return nodeList;
 // }
+
+//+++++++++++++++++++++++++++++++++++++++++
+// ****** DFS InOrder Method *******
+//+++++++++++++++++++++++++++++++++++++++++
+
+// ** Colt's Code **
+// (Just another way to write it)
+  // DFSInOrder() {
+  //   let nodeList = [];
+  //   function traverse(node) {
+  //     node.left && traverse(node.left);
+  //     nodeList.push(node.value);
+  //     node.right && traverse(node.right);
+  //   }
+  //   traverse(this.root);
+  //   return nodeList;
+  // }
+
+// ** My Attempt **
+// (Just a more verbose way)
+  DFSInOrder() {
+    let nodeList = [];
+    let current = this.root;
+    function traverse(node) {
+      if (node.left)traverse(node.left);
+      nodeList.push(node.value);
+      if (node.right)traverse(node.right);
+    }
+    traverse(current);
+    return nodeList;
+  }
 }
+
