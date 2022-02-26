@@ -157,14 +157,61 @@
   - traverse down to the end vertically and then coming back up.
 - There are three main ways of utilizing the DFS method:
 
-#### 1. DFS - InOrder
+#### 1. DFS - PreOrder
 
-![InOrder](./../../UMLs/inOrder.png)
-
-#### 2. DFS - PreOrder
+1. Create a method called that takes in no arguments `postOrder()`,
+2. Create a variable (`nodeData`) to store the **visited** node values (`node.value`)
+3. Create a variable (`current`) to store the root value as that is where we will start, ex: `let current = this.root;`,
+4. Create a helper function for traversing the BST that takes in a Node: `traverse(node)`,
+5. If there is a Node to the left: `if (node.left)`:
+     1. **Visit** each Node using the helper function (`traverse()`) to traverse the left side of the BST `traverse(node.left)` and push each Node's value into the `nodeData` variable: `nodeData.push(node.value)`,
+     2. Then traverse the BST completing the left side first,
+     3. Continue **visiting** all the Nodes and storing their values, until the left side is complete,
+6. Then use the helper function to traverse the right side of the BST,
+7. Repeat the same operations (i - iii) for the right side of the BST until complete,
+8. Invoke the helper function passing the variable `current` in `traverse(current)`,
+9. Return the `nodeData` containing the Node values.
 
 ![PreOrder](./../../UMLs/PreOrder.png)
 
-#### 3. DFS - PostOrder
+#### DFS - PreOrder Step By Step Visual
+
+![preOrder](./../../UMLs/DFS-preOrder.png)
+
+#### DFS - PreOrder Code Example
+
+![preOrder-code](./../../UMLs/preOrder-code.png)
+
+#### 2. DFS - PostOrder
+
+- *This is basically the same as PreOrder, with a little order of operations tweak of the code*.
+
+1. Create a method called that takes in no arguments `postOrder()`,
+2. Create a variable (`nodeData`) to store the **visited** node values (`node.value`)
+3. Create a variable (`current`) to store the root value as that is where we will start, ex: `let current = this.root;`,
+4. Create a helper function for traversing the BST that takes in a Node: `traverse(node)`,
+5. If there is a Node to the left: `if (node.left)`:
+     1. **explore** each Node using the helper function (`traverse()`) to traverse the left side of the BST `traverse(node.left)`,
+     2. Then traverse the BST completing the left side first, exploring both the left and right sides of each Node found,
+     3. When there is no `node.left` or `node.right` to explore on that Node,
+     4. Push the Node's value into the `nodeData` variable: `nodeData.push(node.value)`,
+     5. Then return to the Root.
+6. Then use the helper function to traverse the right side of the BST,
+7. Repeat the same operations (i - iv) for the right side of the BST until complete,
+8. Invoke the helper function passing the variable `current` in `traverse(current)`,
+9. Return the `nodeData` containing the Node values.
 
 ![PostOrder](./../../UMLs/PostOrder.png)
+
+#### DFS - PreOrder Step By Step Visual
+
+![postOrder](./../../UMLs/post-order.png)
+
+#### DFS - PreOrder Code Example
+
+![postOrder-code](./../../UMLs/PostOrder-Code.png)
+
+#### 3. DFS - InOrder
+
+![InOrder](./../../UMLs/inOrder.png)
+
