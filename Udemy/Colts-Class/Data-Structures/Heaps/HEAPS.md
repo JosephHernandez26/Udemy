@@ -4,7 +4,8 @@
 
 ## **Heaps**
 
-![Graph Examples](./Graph-UMLs/graphs.png)
+![Heaps](./UMLs/MaxHeap.png)
+![Min Heap](./UMLs/MinHeap.png)
 
 ### **What is a Heap?**
 
@@ -111,5 +112,3 @@
 ### **The Code Example**
 
 ![Insert/bubbleUp](./UMLs/insertCode.png)
-
-## **MUST-KNOW Heap Terminology**
