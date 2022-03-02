@@ -176,9 +176,9 @@ const challenge = (root,timesIveTraversedAnEdge, targetValue) => {
   if(!root){// base case: when the recursion stops
       return;
   }
-recursive case - where the recursion happens
+//recursive case - where the recursion happens
 
-main part of the code
+//main part of the code
   if(!root.left && !root.right) {
       console.log(root.value,timesIveTraversedAnEdge);
   }
