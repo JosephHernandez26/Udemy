@@ -53,3 +53,75 @@ class MaxBinaryHeap { // Define the class
       heap.insert(66); // the element we are pushing in
       
 
+//+++++++++++++++++++++++++++++++++++++++++
+// ******* Insert and Bubble Up Methods ***********
+//+++++++++++++++++++++++++++++++++++++++++
+
+class MaxBinaryHeap2 { // Define the class
+  constructor() {
+    this.values = []; // this.values is an empty array
+  }
+  // ** Cole's Code
+  extractMax() {
+    const max = this.values[0];
+    const end = this.values.pop();
+
+    if (this.values.length > 0) {
+      this.values[0] = end;
+      this.sinkDown();
+    }
+    return max;
+  }
+  sinkDown() {
+    let index = 0;
+    const length = this.values.length;
+    const element = this.values[0];
+
+    while(true) {
+      let leftChildIndex = 2 * index + 1;
+      let rightChildIndex = 2 * index + 2;
+      let rightChild, leftChild;
+      let swap = null;
+
+      if (leftChildIndex < length) {
+        leftChild = this.values[leftChildIndex];
+
+        if (leftChild > element) {
+          swap = leftChildIndex;
+        }
+      }
+      if (rightChildIndex < length) {
+        rightChild = this.values[rightChildIndex];
+
+        if (
+          (swap === null && rightChild > element) ||
+          (swap !==null && rightChild>leftChild)
+          ){
+            swap = rightChildIndex;
+        }
+
+        if (swap === null) break;
+        this.values[index] = this.values[swap];
+        this.values[swap] = element;
+        index = swap;
+      }
+    }
+  }
+  }
+  // ** My Attempt
+  // extractMax() {
+  //   let current = this.values.root;
+  //   let element = this.values.length - 1;
+  //   current = element; 
+  //   this.values.pop(current);
+  //   while (this.values > 0) {
+  //     let parentIndex = Math.floor((current[index] * 2) + 1)
+  //     if (parentIndex >= current || current + 2) break;
+  //     if (parentIndex <= current) {
+  //       this.values[current] = parentIndex
+  //     } else if (parentIndex <= current +2) {
+  //       this.values[current + 2] = parentIndex;
+  //     }
+  //   }
+  //    return current;
+  // }

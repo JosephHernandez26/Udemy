@@ -4,7 +4,12 @@
 
 ## **Heaps**
 
+### The Max Heap
+
 ![Heaps](./UMLs/MaxHeap.png)
+
+### The Min Heap
+
 ![Min Heap](./UMLs/MinHeap.png)
 
 ### **What is a Heap?**
@@ -105,10 +110,71 @@
 
 ### **Bubbling Up Step By Step Visual**
 
-[StepOne](./UMLs/BubbleUp1.png)
-[StepTwo](./UMLs/BubbleUp2.png)
-[StepThree](UMLs/BubbleUp3.png)
+#### Step One
+
+![StepOne](./UMLs/BubbleUp1.png)
+
+#### Step Two
+
+![StepTwo](./UMLs/BubbleUp2.png)
+
+#### Step Three
+
+![StepThree](UMLs/BubbleUp3.png)
 
 ### **The Code Example**
 
 ![Insert/bubbleUp](./UMLs/insertCode.png)
+
+## **Removing from the Max Binary Heap, the ExtractMax Method**
+
+- When removing from a Max Heap, you are removing the Max value (root).
+- Conversely, when removing from the Min Heap, you are removing the Min Value but still the Root.
+
+### Sink Down
+
+- The procedure for deleting the Root from the Heap and restoring all the properties.
+*Effectively extracting the Maximum element in a Max-Heap or the Minimum element in a Min-Heap*
+- There are many ways to say this:
+  - Bubble-Down
+  - Percolate-Down
+  - Sift-Down
+  - Trickle-Down
+  - Heapify-Down
+  - Cascade-Down
+  - Extract-Min(or Max)
+
+### Sink Down Step-By-Step (A visual)
+
+#### Step One
+
+- Remove the Root (the maximum (MaxHeap) or minimum (MinHeap) value)
+
+![StepOne](./UMLs/extract1.png)
+
+#### Step Two
+
+- Swap the last value with the extracted root.
+
+![StepTwo](./UMLs/extract2.png)
+
+#### Step Three
+
+- Compare the new Root with its Child.
+- If the Child is bigger, swap.
+
+![StepThree](./UMLs/extract4.png)
+
+#### Step Four
+
+- Now Compare the Parent to its children
+-  If any are larger than the parent - Swap
+   -  Else, do nothing. New Paret value stays.
+  
+![StepFour](./UMLs/extract5.png)
+
+#### Step Five
+
+- This is what the completed sinkDown() looks like.
+
+![StepFive](UMLs/extract6.png)
