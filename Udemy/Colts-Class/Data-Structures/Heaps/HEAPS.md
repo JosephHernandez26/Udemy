@@ -178,3 +178,6 @@
 - This is what the completed sinkDown() looks like.
 
 ![StepFive](UMLs/extract6.png)
+
+### The Priority Queue
+
